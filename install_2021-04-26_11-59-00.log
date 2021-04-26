@@ -1,0 +1,138 @@
+To install this TestDrive you have to accept 
+the SAP COMMUNITY DEVELOPER License (DEV).
+Do you agree to the above license terms? yes/no:
+User's response to the accept license prompt = 'yes'
+Please enter a password:
+Please re-enter password for verification:
+extracting data archives...
+extracting /media/sf_sapabap/server/TAR/x86_64/dbdata.tgz-*
+extracting /media/sf_sapabap/server/TAR/x86_64/dblog.tgz-*
+extracting /media/sf_sapabap/server/TAR/x86_64/dbexe.tgz-*
+extracting /media/sf_sapabap/server/TAR/x86_64/usrsap.tgz-*
+extracting /media/sf_sapabap/server/TAR/x86_64/sapmnt.tgz-*
+Checking Linux kernel memory management parameters according to SAP Note 941735
+Backing up /etc/sysctl.conf in /etc/sysctl.backup
+Checking Linux kernel parameter vm.max_map_count according to SAP Note 900929
+Updating the sysctl option vm.max_map_count
+The option vm.max_map_count was added to the configuration file
+Checking presence of new SYBASE license files
+No new licenses were copied from /media/sf_sapabap/server/TAR/x86_64 to /sybase/NPL/SYSAM-2_0/licenses
+Install service
+[Thr 140003843184448] Mon Apr 26 12:19:57 2021
+[Thr 140003843184448] Executing : useradd -c "SAP Local Administrator" -r -g sapsys -s /bin/false sapadm 
+Check Installation Path ...
+ok
+Copy Executable ...
+ok
+Generate Profile ...
+ok
+Install SYS-V service ...
+ok
+-> Start /usr/sap/hostctrl/exe/saphostexec pf=/usr/sap/hostctrl/exe/host_profile <- 
+start hostcontrol using profile /usr/sap/hostctrl/exe/host_profile
+ok
+[OK] SAPHostExec / SAPHostControl succesfully installed
+Executing: "/usr/sap/hostctrl/exe/SAPCAR" -xvf "./SHADBMETRICSDEF.SAR" -R "/usr/sap/hostctrl/exe/config.d" 
+SAPCAR: processing archive ./SHADBMETRICSDEF.SAR (version 2.01)
+x dbmetric.definition.db4.cimobj
+x dbmetric.definition.db6.cimobj
+x dbmetric.definition.hdb.cimobj
+x dbmetric.definition.mss.cimobj
+x dbmetric.definition.ora.cimobj
+x dbmetric.definition.sap.cimobj
+x dbmetric.definition.siq.cimobj
+x dbmetric.definition.syb.cimobj
+x dbmetric.definition.tst.cimobj
+x dbmetrics.d
+x dbmetrics.d/00.general.hdb.cimobj
+x dbmetrics.d/00.state.hdb.cimobj
+x dbmetrics.d/10.host.capacity.hdb.cimobj
+x dbmetrics.d/20.indexserver.hdb.cimobj
+x dbmetrics.d/20.nameserver.hdb.cimobj
+SAPCAR: 15 file(s) extracted
+SAPCAR: rc 0 
+=>sapparam(1c): No Profile used.
+=>sapparam: SAPSYSTEMNAME neither in Profile nor in Commandline
+################################################
+Abort execution because of 
+Step returns modlib.jslib.caughtException
+################################################
+
+Error: sapinst has finished with an error code, please find logs in /tmp/sapinst_instdir
+Error code: 20
+++++ Support data section BEGIN ++++
+* mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,size=4063032k,nr_inodes=1015758,mode=755)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/rdma type cgroup (rw,nosuid,nodev,noexec,relatime,rdma)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+/dev/sda on / type ext4 (rw,relatime)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=28,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=14047)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,relatime)
+sapabap on /media/sf_sapabap type vboxsf (rw,nodev,relatime,iocharset=utf8,uid=0,gid=461,dmode=0770,fmode=0770,tag=VBoxAutomounter)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=814516k,mode=700,uid=1000,gid=100)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=100)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)
+/dev/sr0 on /run/media/paulo/VBox_GAs_6.1.18 type iso9660 (ro,nosuid,nodev,relatime,nojoliet,check=s,map=n,blocksize=2048,uid=1000,gid=100,dmode=500,fmode=400,uhelper=udisks2)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,relatime)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)
+* df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        3.9G     0  3.9G   0% /dev
+tmpfs           3.9G     0  3.9G   0% /dev/shm
+tmpfs           3.9G   18M  3.9G   1% /run
+tmpfs           3.9G     0  3.9G   0% /sys/fs/cgroup
+/dev/sda        147G   41G   99G  30% /
+sapabap         245G  110G  135G  45% /media/sf_sapabap
+tmpfs           796M   11M  786M   2% /run/user/1000
+/dev/sr0         59M   59M     0 100% /run/media/paulo/VBox_GAs_6.1.18
+* df -hi
+Filesystem     Inodes IUsed IFree IUse% Mounted on
+devtmpfs         992K   453  992K    1% /dev
+tmpfs            995K     1  995K    1% /dev/shm
+tmpfs            995K   656  994K    1% /run
+tmpfs            995K    18  995K    1% /sys/fs/cgroup
+/dev/sda         9.4M  214K  9.2M    3% /
+sapabap          1000 -976K  977K     - /media/sf_sapabap
+tmpfs            995K    47  995K    1% /run/user/1000
+/dev/sr0            0     0     0     - /run/media/paulo/VBox_GAs_6.1.18
+* cat /etc/os-release
+NAME="openSUSE Leap"
+VERSION="15.2"
+ID="opensuse-leap"
+ID_LIKE="suse opensuse"
+VERSION_ID="15.2"
+PRETTY_NAME="openSUSE Leap 15.2"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:opensuse:leap:15.2"
+BUG_REPORT_URL="https://bugs.opensuse.org"
+HOME_URL="https://www.opensuse.org/"
+* ls -ld / /sybase /usr/sap /sapmnt
+drwxr-xr-x 26 root   root   4096 Apr 26 12:18 /
+drwxr-xr-x  3 root   root   4096 Sep  6  2019 /sapmnt
+drwxr-x---  3 sybnpl sapsys 4096 Feb 20  2017 /sybase
+drwxr-xr-x  7 root   root   4096 Apr 26 12:24 /usr/sap
+++++ Support data section END ++++
+All logs have been written to the file /media/sf_sapabap/install_2021-04-26_11-59-00.log
+Please see readme.html to find out how to get help
